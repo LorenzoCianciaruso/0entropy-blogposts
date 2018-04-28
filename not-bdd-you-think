@@ -1,0 +1,87 @@
+Not the BDD you think...
+
+About cognitive bias and software engineering.
+
+
+BDD is one of the most common buzzwords when we talk about testing in software development. Just look at recent job postings and you'll see it mentioned many times.
+But today I am not gonna talk about testing, but I am still gonna talk about BDD. How would that be possible?
+
+The BDD I have in my mind it's not Behaviour Driven Development. It's **Bias Driven Development** instead.
+
+## What is bias?
+
+Bias is something sneaky, it's a deviated opinion or thought that you are unaware of due to a lack of a neutral point of view. 
+It's present in all of us just because we can't understand the totality of the information we can access to. It usually reveals itself when we are exposed to a third party opinion (which can be biased as well) pointing out at data we haven't considered.
+
+It can manifest itself in two occasions:
+* when our mental process which analyze information is faulty
+* when our sampling dataset is not relevant or incomplete
+
+## Bias in software development?
+
+Yes, it happens... a lot. And it doesn't happen only to devs, it constantly affects our software in the whole software lifecycle.
+
+From the first idea of a product, to the last iteration of sprints, we are constantly affected by bias. Removing it is not possible and it's not the solution, but we must be aware and accept it. 
+Collaboration and black box thinking[^1] could be two ways of mitigating it.
+
+### Confirmation Bias
+
+Let's consider now the [confirmation bias](https://en.wikipedia.org/wiki/Confirmation_bias):
+> is the tendency to search for, interpret, favor, and recall information in a way that confirms one's preexisting beliefs or hypothesis.
+
+It's like having a very lazy brain, as soon as there is one minimum signal that could theoretically prove you vision, no further investigation is needed anymore.
+
+It spreads across team cross-roles: unclear specifications from analysts can cause more affliction, as well as positive testing strategy.
+
+Yes, especially in testing it's where it could have the most cathastrophic effects. Testers should test to break, not test to check it's working. If you don't test to break you are very susceptible to confirmation bias, as your attitude is to stop at the first good signal.
+
+Developers are not less at risk, especially less experienced ones.
+People tend to see patterns as rules. Rules that can't be changed most of the times, so if A happens B doesn't... until something breaks in production.
+
+Studies[^2] have shown how confirmation bias affects software quality and one of the possible mitigations is to try to reason in the most logical way, without considering too much gut feelings and unfounded opinions.
+
+### Information overload
+
+I said earlier that bias can be caused by an incomplete or wrong data set.
+
+Now imagine you have a given problem you have to solve, pretty much well defined and already solved by many people.
+You want to document yourself with some resources and you surf the Internet to see how you could solve your problem.
+
+You basically have unlimited resources you can use, so what could go wrong?
+
+And here bias happens, there is so much information out there that this huge amount of data confuses and oppress you.
+You see countless articles proposing a solution, and then you see another huge amount of articles proposing a complete opposite solution. And you continue digging through the rabbit hole.
+
+Then what happens is that you stop. You stop searching for new material, and you start to filter the information you have, based on the idea you have already in your mind. And that filtering, can let you discard some useful data that could actually help you to solve your problem.
+
+That's because our brain has limited resources. It cannot hold that incredible amount of information that we are exposed to, and the only thing we can do is filtering.
+
+Don't get me wrong, that is absolutely natural, and is vital to do it in order to proceed with our job. But be mindful to yourselves, if you see that some of your hypothesis are not proved by experience, maybe you have lost some of that useful information while you were gatherig data.
+
+### A good story for something very specific
+
+From Daniel Kahneman's [Thinking, fast and slow](https://www.amazon.co.uk/gp/product/0141033576/ref=as_li_tl?ie=UTF8&tag=lciancia-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141033576&linkId=f47795e15baaf4b2f1464269fd75e270)[^3]
+> Steve is very shy and withdrawn, invariably helpful, but with little interest in people, or in the world of reality. A meek and tidy soul, he has a need for order and structure, and a passion for detail.
+
+Is Steve more likely to be a farmer or a librarian?
+
+Of course Steve really fits the stereotype of a librarian. He seems to avoid human contact and he be very meticulous. Those are certainly traits the librarian could have.
+
+But actually, how many librarians are there compared to farmers? The answer is ruthless. In the US the ratio between famers and librarians is 20 to 1.
+
+That's to say that people tend to give too much credit to information that seems shaped for a very specific scenario, without looking at the broader spectre of possibilities.
+
+On the same way, in software we tend to justify something really specific with good stories. 
+
+The website is slow? It must be the host provider.
+Ui tests not passing, it must be some fleakyness in the tests.
+
+What I am trying to say is that many times some guesses are made with good stories, that don't really help when trying to find the right solution.
+
+Try to get as many data as possible every time you face a challenge. The website is slow? Isolate every component and find the bottleneck through the use of data, not just guesses.
+
+And accept that sometimes there is no good story. Get your data, the solution may be there but you are not seeing it.
+
+[^1]: [Matthew Sied, Black box thinking](https://www.amazon.co.uk/gp/product/1473613809/ref=as_li_tl?ie=UTF8&tag=lciancia-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=1473613809&linkId=5a441596be224df37075a8dda70aeeaa)
+[^2]: [Iflaah Salman, Cognitive Biases in Software Quality and Testing](https://www.researchgate.net/publication/295852107_Cognitive_Biases_in_Software_Quality_and_Testing)
+[^3]: [Daniel Kahneman, Thinking, fast and slow](https://www.amazon.co.uk/gp/product/0141033576/ref=as_li_tl?ie=UTF8&tag=lciancia-21&camp=1634&creative=6738&linkCode=as2&creativeASIN=0141033576&linkId=f47795e15baaf4b2f1464269fd75e270)
